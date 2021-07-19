@@ -1,0 +1,179 @@
+/*                             HEAD & FOOTER                              */
+#foot{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 3%;
+}
+/* ------------------------------------------------------------------------------- */
+
+/*                              VISTA ADMINISTRADOR                              */
+.btn-sm{
+    background-color: rgb(70, 12, 226);
+    color: white;
+    margin-left: auto;
+    display: flex;
+
+
+}
+.btn-sm:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000; 
+}
+
+#contIzq{
+    height:40%;
+    border-radius:25px;
+
+}
+#contDer{
+    border-radius:20px;
+    padding: 4%;
+}
+
+#cards{
+    width: 17ems;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+#modal{
+    border-radius: 25px;
+}
+#segundo{
+  padding-top: 5%;
+}
+#modalIzquierda{
+  width: auto;
+  height: auto;
+}
+
+
+#modalDer{
+  text-align:justify;
+  width: auto;
+  height: auto;
+}
+
+.navbar-nav, .nav-link, a {
+    
+    color:#526191;
+}
+
+.nav-link:hover{
+    color: #F6CB55;
+}
+
+.modal-header{
+    border-style: none;
+}
+.modal-footer{
+    border-style: none;
+}
+.row{
+    border-style: none;
+}
+#cards-img{
+    max-height:100% ;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+.card-body{
+    padding-top: 0;
+    margin: 0;
+    
+}
+#scroll{
+    margin: 0;
+    display: inline-block;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.5px;
+    border-style:hidden;
+
+    color: #333;
+    font-family: sans-serif;
+    text-align: left;
+    line-height: 1.3;
+    overflow:auto;
+
+  }
+
+  #scroll p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  /* Tamaño del scroll */
+  #scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+   /* Estilos barra (thumb) de scroll */
+   #scroll::-webkit-scrollbar-thumb {
+    background: rgb(4, 189, 65);
+    border-radius: 4px;
+  }
+  
+  #scroll::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  #scroll::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+   /* Estilos track de scroll */
+   #scroll::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+  }
+  
+  #scroll::-webkit-scrollbar-track:hover, 
+  #scroll::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+
+/* ------------------------------------------------------------------------------- */
+
+/*                              VISTA LOGIN                              */
+
+
+  
+  #izq{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+
+  }
+  .circular--portrait {
+    overflow: hidden;
+    border-radius: 50%;
+    display:inline-block;
+  }
+  
+  .circular > img {
+    width: 100%;
+    height: 50%;
+  }
+  #cardLogin{
+      border-radius: 25px;
+      padding: 5%;
+      width: 60%;
+  }
+  #der{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+/* ------------------------------------------------------------------------------- */
