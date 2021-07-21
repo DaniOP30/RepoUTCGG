@@ -1,16 +1,19 @@
 <header>
-    <nav class="navbar navbar-expand-xl">
-        <div class="container">
-            <a class="navbar-brand" href="/"><img src="img/logo-rep.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link active" href="/"> Home <span class="sr-only">(current)</span></a>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand">
+        <img src="img/utcgg.png" height="40" alt="CoolBrand" style="margin-left:50px">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                </div>
-            </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ">
+            <a href="#" class="nav-item nav-link">Inicio</a>
         </div>
-    </nav>
-</header>
+        <div class="navbar-nav ml-auto">
+            <a href="#" class="nav-item nav-link">Iniciar sesión</a>
+        </div>
+    </div>
+</nav>
+</header>   

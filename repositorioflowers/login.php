@@ -55,9 +55,17 @@ require 'back/conexion.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+
+<!--  FONTS IMPORT   -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="Styles/styleFlowers.css">
+    <link rel="stylesheet" type="text/css" href="css/styleflowers.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -70,52 +78,55 @@ include("header.php");
 ?>
 
 <body>
-    <div class="container-fluid">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6" id="izq">
-                    <div class="container">
-                        <img src="img/logo.png" class="img-responsive">
-                        <h4>Equipo desarrollador</h4><br>
-                        <span>Carlos Daniel Olivo Perez</span><br>
-                        <span>Daniel Flores Peralta</span><br>
-                        <span>Mauricio Lopez Piedra</span><br><br>
-                        <div class="circular--portrait">
-                            <img src="img/olivo.png" />
-                        </div>
-                        <div class="circular--portrait">
-                            <img src="img/flowers.png" />
-                        </div>
-                        <div class="circular--portrait">
-                            <img src="img/mao.png" />
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-6" id="der">
-                    <div class="card text-center" id="cardLogin">
-                        <h5>Iniciar sesion</h5><br>
-                        <p class="text-center">Iniciar sesion para acceder al sistema<br>de repositorio mas chido</p>
-                        <form action="#" method="POST">
-                            <div class="form-group ">
-                                <label for="formGroupExampleInput"></label>
-                                <input type="text" class="form-control" name="usuario" placeholder="Ingresa tu usuario">
-                            </div>
-                            <div class="form-group">
-                                <label for="formGroupExampleInput2"></label>
-                                <input type="text" class="form-control" name="password" placeholder="Ingresa tu contraseña"><br>
-
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Iniciar sesion</button><br>
-                                <span>No tienes cuenta? <a href="#">Registrate aqui.</a></span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<body>
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/ilustracion.svg" alt="Image" class="img-fluid">
         </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Iniciar sesión</h3>
+              <p class="mb-4">Inicia sesión para acceder al sistema
+                            de repositorio mas chido</p>
+            </div>
+            <form action="#" method="POST">
+              <div class="form-group first">
+                <label for="username">Usuario</label>
+                <input type="text" class="form-control" id="username" name="usuario">
+
+              </div>
+              <div class="form-group last mb-4">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password">
+                
+              </div>
+   
+              <input type="submit" value="Iniciar sesión" class="btn btn-block " style="background-color:#42C392; color:white"> <br>
+              <label class="ml-auto"><a href="#" class="forgot-pass">No tienes cuenta? <span style="color:#9271F6;">Registrate</span></a></label> 
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 <?php
 include("footer.php");
 ?>
+
+<script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+         
 </body>
 
 </html>

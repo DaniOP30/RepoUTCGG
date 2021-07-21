@@ -1,3 +1,8 @@
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #F7F9FB;
+}
 /*                             HEAD & FOOTER                              */
 #foot{
     justify-content: center;
@@ -147,24 +152,37 @@
 
 /*                              VISTA LOGIN                              */
 
-
-  
+.container-info{
+  margin-top: 40px;
+  margin-left: 400px;
+}
+  .img-avatar img{
+  display: inline-block;
+  padding-left: 10px;
+  height: 50px;
+  margin-top: 20px;
+  }
+  .Names h4{
+    display:block;
+    margin-top: 1 0px;
+    margin-left: 10px;
+    font-size: 13px;
+    color: #727C91;
+    font-weight: 300;
+  }
+  .titulo h4{
+    margin-top:40px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color:#122245;
+    font-weight: 600;
+  }
   #izq{
     align-items: center;
     display: flex;
     justify-content: center;
     padding-left: 5%;
 
-  }
-  .circular--portrait {
-    overflow: hidden;
-    border-radius: 50%;
-    display:inline-block;
-  }
-  
-  .circular > img {
-    width: 100%;
-    height: 50%;
   }
   #cardLogin{
       border-radius: 25px;

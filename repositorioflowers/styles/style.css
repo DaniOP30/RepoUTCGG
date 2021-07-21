@@ -1,7 +1,10 @@
 body{
-    background-color: #F7F9FB;
+    background-color: #FFFFFF
 }
-
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F9FB;
+  }
 /**/
 #card_menuLateral{
     height: 150%;  
