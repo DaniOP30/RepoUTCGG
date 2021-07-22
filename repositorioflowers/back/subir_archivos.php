@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-header('Location: ../registrarRepositorio.php.php');
+header('Location: ../registrarRepositorio.php');
 die();
 
 ?>
