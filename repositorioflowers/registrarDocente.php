@@ -79,7 +79,7 @@ $result = mysqli_query($conexion, $query);
               </th>
               <th scope="col">Nombre</th>
               <th scope="col">Apellidos</th>
-             
+
               <th scope="col">Matricula</th>
               <th scope="col">Usuario</th>
               <th scope="col">Contraseña</th>
@@ -95,8 +95,7 @@ $result = mysqli_query($conexion, $query);
            
               <td><a href="#"><?php echo $registro['nombre']; ?></a></td>
               <td><?php echo $registro['apellidos']; ?></td>
-              
-              <td>18307056</td>
+              <td><?php echo $registro['matricula']; ?></td>
               <td><?php echo $registro['username']; ?></td>
               <td class="hidetext" style="-webkit-text-security: disc;"><?php echo $registro['password']; ?></td>
             <td> <a href="back/eliminar_docente.php?valor=<?php echo $registro['id']; ?>"><i class="bi bi-trash"></i></a></td>
