@@ -36,7 +36,7 @@
                             </div>
                             <div class="col">
                                 <select id="inputState" class="form-control" name="cuatri">
-                                    <option selected>--Selecciona tu grupo--</option>
+                                    <option selected>--Selecciona tu grado--</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -53,7 +53,7 @@
                         <div class="row" id="row-modal">
                             <div class="col">
                                 <select id="inputState" class="form-control" name="carrera">
-                                        <option selected>--Selecciona tu grupo--</option>
+                                        <option selected>--Selecciona tu Carrera--</option>
                                         <option>Ing. en Procesos Alimentarios</option>
                                         <option>Ing. en Mantenimiento Industrial</option>
                                         <option>Ing. en Desarrollo y Gestión de Software</option>
