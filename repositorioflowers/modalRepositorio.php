@@ -21,7 +21,7 @@
                     
                     <h3 class="modal-title" id="modalTitle">Nuevo Repositorio</h3>
                     Registre sus repositorios y sus manuales
-                    <form action="subir_archivos.php" method="POST" enctype="multipart/form-data">
+                    <form action="back/subir_archivos.php" method="POST" enctype="multipart/form-data">
                         <div class="row" id="row-modal">
                             <div class="col">
 
