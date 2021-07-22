@@ -126,6 +126,7 @@ require 'back/conexion.php';
                 </thead>
             </table>
         </form>
+        
     <div class="content p-4">
     <h1 class="display-5 mb-4">Todos los repositorios</h1>
     <div class="col-12">
@@ -141,11 +142,20 @@ require 'back/conexion.php';
     <h5 class="card-title" style="margin-top:10px; "><?php echo $registro[1]; ?></h5>
     <h6 class="card-subtitle mb-2 text-muted" style="font: weight 100px; color: #9271F6 !important; font-weight:300 !important">
     <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
-    
+    <style>
+    p {
+ overflow: hidden;
+ width: 250px;
+ white-space: nowrap;
+ display:inline-block;
+ text-overflow: ellipsis;
+ 
+ }
+    </style>
     <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[4]; ?></p>
-    <a class="btn btn-outline-primary" href="#" role="button" ><?php echo $registro[5]; ?></a>
-    <a class="btn btn-outline-success" href="#" role="button" ><?php echo $registro[6]; ?></a>
-    <a class="btn btn-outline-info" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
+    <a class="btn btn-outline-primary btn-sm" href="#" role="button" ><?php echo $registro[5]; ?></a>
+    <a class="btn btn-outline-success btn-sm" href="#" role="button" ><?php echo $registro[6]; ?></a>
+    <a class="btn btn-outline-info btn-sm" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
 
     <a href="modal.php?valor=<?php echo $registro[0]; ?>" class="card-link" style="color:#42C392; margin-top:20px" >Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
     <a href="#" class="card-link"></a>

@@ -100,7 +100,16 @@ require 'back/conexion.php';
     <h5 class="card-title" style="margin-top:10px; "><?php echo $registro[1]; ?></h5>
     <h6 class="card-subtitle mb-2 text-muted" style="font: weight 100px; color: #9271F6 !important; font-weight:300 !important">
     <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
-    
+    <style>
+    p {
+ overflow: hidden;
+ width: 250px;
+ white-space: nowrap;
+ display:inline-block;
+ text-overflow: ellipsis;
+ 
+ }
+    </style>
     <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[4]; ?></p>
     <span class="badge badge-pill badge-info" style="font-size:13px;font-weight:300;"><?php echo $registro[6]; ?></span>
     <span class="badge badge-pill badge-success" style="font-size:13px;font-weight:300;"><?php echo $registro[7]; ?></span> 
