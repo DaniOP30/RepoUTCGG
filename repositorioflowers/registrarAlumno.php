@@ -101,7 +101,7 @@ $result = mysqli_query($conexion, $query);
               <td>18307056</td>
               <td><?php echo $registro['username']; ?></td>
               <td class="hidetext" style="-webkit-text-security: disc;"><?php echo $registro['password']; ?></td>
-            <td> <button type="button" class="btn btn-danger btn-sm">Eliminar</button></td>
+            <td> <a href="back/eliminar_alumno.php?valor=<?php echo $registro['id']; ?>"><i class="bi bi-trash"></i></a></td>
             </tr>
            
             <tr class="spacer"><td colspan="100"></td></tr>

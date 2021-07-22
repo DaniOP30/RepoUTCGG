@@ -21,7 +21,7 @@
                     
                     <h3 class="modal-title" id="modalTitle">Registrar Docente</h3>
                     Registra docentes para darles acceso a los repositorios
-                    <form action="back/subir_docente.php">
+                    <form action="back/subir_docente.php" method="post">
                         <div class="row" id="row-modal">
                             <div class="col">
                             <input type="text" class="form-control" placeholder="Nombre" name="nombre">
