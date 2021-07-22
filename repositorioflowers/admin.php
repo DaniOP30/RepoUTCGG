@@ -93,7 +93,7 @@ require 'back/conexion.php';
                                 <option selected value="">Todos</option>
                                 <option value="Ing. en Procesos Alimentarios">Ing. en Procesos Alimentarios</option>
                                 <option value="Ing. en Mantenimiento Industrial">Ing. en Mantenimiento Industrial</option>
-                                <option value="TI">TI</option>
+                                <option value="Ing. Desarrollo y Gestión de Software">Ing. Desarrollo y Gestión de Software</option>
                                 <option value="Ing. en Energías Renovables">Ing. en Energías Renovables</option>
                                 <option value="Lic. en Gestión del Capital Humano">Lic. en Gestión del Capital Humano</option>
                                 <option value="Ing. en Metal Mecánica">Ing. en Metal Mecánica</option>
