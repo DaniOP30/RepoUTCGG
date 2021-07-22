@@ -56,7 +56,7 @@ $result = mysqli_query($conexion, $query);
 <body>
     <?php
     include 'sidebar.php';
-    include 'modalAlumno.php';
+    include 'modalDocente.php';
     ?>
     <div class="container" >
     <div class="content p-4">
