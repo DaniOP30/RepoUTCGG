@@ -1,4 +1,17 @@
 <?php
+session_start();
+$nombre = $_SESSION['nombre'];
+
+if(!isset($_SESSION['rol'])){
+    header('location:login.php');
+}else{
+    if($_SESSION['rol']!=1){
+        header('location:login.php');
+
+    }
+}
+?>
+<?php
 require 'back/conexion.php';
 
 $query = "SELECT * FROM tb_docente";

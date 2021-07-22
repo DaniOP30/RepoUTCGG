@@ -1,5 +1,6 @@
 <?php
 session_start();
+$nombre = $_SESSION['nombre'];
 
 if(!isset($_SESSION['rol'])){
     header('location:login.php');
@@ -13,8 +14,7 @@ if(!isset($_SESSION['rol'])){
 
 <?php
 require 'back/conexion.php';
-$query = "SELECT id, nombre, descripcion, nombre_a, carrera, tipo_proyecto, nivel_proyecto FROM repositorios";
-$result = mysqli_query($conexion, $query);
+
 
 
 ?>
@@ -49,12 +49,88 @@ $result = mysqli_query($conexion, $query);
         include("sidebar.php");
         ?>
     <div class="container">
+    <?php
+
+        if (isset($_POST['buscar'])) {
+            $where = '';
+            $carrera = $_POST["carrera"];
+            $tipo = $_POST["tipo"];
+            $nivel = $_POST["nivel"];
+            if (empty($_POST['carrera']) && empty($_POST['tipo'])) {
+                $where = "where nivel_proyecto like '" . $nivel . "%'";
+            } else if (empty($_POST['carrera']) && empty($_POST['nivel'])) {
+                $where = "where tipo_proyecto like '" . $tipo . "%'";
+            } else if (empty($_POST['tipo']) && empty($_POST['nivel'])) {
+                $where = "where carrera like '" . $carrera . "%'";
+            } else if (isset($_POST['tipo']) && isset($_POST['nivel']) && (empty($_POST['carrera']))) {
+                $where = "where tipo_proyecto like '" . $tipo . "%' && nivel_proyecto= '" . $nivel . "'";
+            } else if (isset($_POST['carrera']) && isset($_POST['nivel']) && (empty($_POST['tipo']))) {
+                $where = "where carrera like '" . $carrera . "%' && nivel_proyecto= '" . $nivel . "'";
+            } else if (isset($_POST['carrera']) && isset($_POST['tipo']) && (empty($_POST['nivel']))) {
+                $where = "where carrera like '" . $carrera . "%' && tipo_proyecto= '" . $tipo . "'";
+            } else {
+                $where = "where carrera like '" . $carrera . "%' && tipo_proyecto= '" . $tipo . "' && nivel_proyecto= '" . $nivel . "'";
+            }
+
+
+
+            $query = "SELECT * FROM repositorios $where";
+        } else {
+            $query = "SELECT * FROM repositorios";
+        }
+
+        $result = mysqli_query($conexion, $query);
+
+
+        ?>
+                <form method="POST">
+            <table class="table">
+                <thead>
+                    <tr class="filtro">
+                        <th>
+                            Carrera
+                            <select class="form-select" aria-label="Default select example" name="carrera">
+                                <option selected value="">Todos</option>
+                                <option value="Ing. en Procesos Alimentarios">Ing. en Procesos Alimentarios</option>
+                                <option value="Ing. en Mantenimiento Industrial">Ing. en Mantenimiento Industrial</option>
+                                <option value="TI">TI</option>
+                                <option value="Ing. en Energías Renovables">Ing. en Energías Renovables</option>
+                                <option value="Lic. en Gestión del Capital Humano">Lic. en Gestión del Capital Humano</option>
+                                <option value="Ing. en Metal Mecánica">Ing. en Metal Mecánica</option>
+                                <option value="Ing. en Logística Internacional">Ing. en Logística Internacional</option>
+                                <option value="Lic. en Gestión y Desarrollo Turístico">Lic. en Gestión y Desarrollo Turístico</option>
+                                <option value="Lic. en Gastronomía">Lic. en Gastronomía</option>
+                            </select>
+                        </th>
+                        <th>
+                            Tipo de proyecto
+                            <select class="form-select" aria-label="Default select example" name="tipo">
+                                <option selected value="">Todos</option>
+                                <option value="Integradora">Integradora</option>
+                                <option value="Estadia">Estadia</option>
+                                <option value="Especial">Especial</option>
+                            </select>
+                        </th>
+                        <th>
+                            Nivel de proyecto
+                            <select class="form-select" aria-label="Default select example" name="nivel">
+                                <option selected value="">Todos</option>
+                                <option value="TSU">TSU</option>
+                                <option value="Ingenieria">Ingenieria</option>
+                            </select>
+                        </th>
+                        <th>
+                            <input type="submit" name="buscar" class="btn btn-success" value="Ver">
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </form>
     <div class="content p-4">
     <h1 class="display-5 mb-4">Todos los repositorios</h1>
     <div class="col-12">
         <div class="row">
 
-<<<<<<< HEAD
         <?php
         while ($registro = mysqli_fetch_array($result)){
             ?>
@@ -66,10 +142,10 @@ $result = mysqli_query($conexion, $query);
     <h6 class="card-subtitle mb-2 text-muted" style="font: weight 100px; color: #9271F6 !important; font-weight:300 !important">
     <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
     
-    <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[2]; ?></p>
-    <a class="btn btn-outline-primary btn-sm" href="#" role="button" ><?php echo $registro[4]; ?></a>
-    <a class="btn btn-outline-success btn-sm" href="#" role="button" ><?php echo $registro[5]; ?></a>
-    <a class="btn btn-outline-info btn-sm" href="#" role="button" ><?php echo $registro[6]; ?></a><br><br>
+    <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[4]; ?></p>
+    <a class="btn btn-outline-primary" href="#" role="button" ><?php echo $registro[5]; ?></a>
+    <a class="btn btn-outline-success" href="#" role="button" ><?php echo $registro[6]; ?></a>
+    <a class="btn btn-outline-info" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
 
     <a href="#" class="card-link" style="color:#42C392; margin-top:20px" value="<?php echo $v?>" onclick="obtenerId(v);" data-toggle="modal" data-target="#ventanamodal">Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
     <a href="#" class="card-link"></a>
@@ -83,70 +159,6 @@ $result = mysqli_query($conexion, $query);
 
 <body>
 
-=======
-<nav class="navbar navbar-expand navbar-light bg-light">
-    <a class="sidebar-toggle text-light mr-3" ><i class="fa fa-bars" style="color:#122245;"></i></a>
-
-    <a class="navbar-brand" href="#"  style="color:#122245; font: weight 600;"><i class="fa fa-code-branch" style="color:#42C392"></i>UTCGG</a>
-
-    <div class="navbar-collapse collapse" >
-        <ul class="navbar-nav ml-auto" >
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="color:#0B1427">
-                    <i class="fa fa-user" style="color:#42C392"></i> Username 
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Información</a>
-                    <a class="dropdown-item" href="#">Cerrar sesión</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-
-<div class="d-flex">
-    <nav class="sidebar bg-light" >
-        <ul class="list-unstyled">
-            <li ><a href="#"><i class="fa fa-fw fa-file-search" style="color:#9271F6" ></i> Repositorios</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-user-plus" style="color:#42C392"></i> Registrar alumno</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-chalkboard-teacher" style="color:#42C392"></i> Registrar Docente</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-file-plus" style="color:#42C392"></i>Agregar repositorio</a></li>
-           
-    </nav>
-    <div class="container">
-    <div class="content p-4">
-    <h1 class="display-5 mb-4">Todos los repositorios</h1>
-    <div class="col-12">
-        <div class="row">
-        <?php
-        while ($registro = mysqli_fetch_array($result)){
-            ?>
-        <div class="col-md-6 col-lg-4">
-        <div class="card" height="20" style="margin-top:30px;">
-  <div class="card-body">
-    <h5 class="card-title" style="margin-top:10px; "><?php echo $registro[1]; ?></h5>
-    <h6 class="card-subtitle mb-2 text-muted" style="font: weight 100px; color: #9271F6 !important; font-weight:300 !important">
-    <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
-    
-    <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[2]; ?></p>
-    <a class="btn btn-outline-primary btn-sm" href="#" role="button" ><?php echo $registro[4]; ?></a>
-    <a class="btn btn-outline-success btn-sm" href="#" role="button" ><?php echo $registro[5]; ?></a>
-    <a class="btn btn-outline-info btn-sm" href="#" role="button" ><?php echo $registro[6]; ?></a><br><br>
-
-    <a href="#" class="card-link" style="color:#42C392; margin-top:20px" value="<?php echo $v?>" onclick="obtenerId(v);" data-toggle="modal" data-target="#ventanamodal">Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
-    <a href="#" class="card-link"></a>
-  </div>
-
-</div>
-</div>
-<?php }?>
-</div>
-</div>
-
-<body>
-
->>>>>>> 772ed48a1eaad8678d56c3d66eb7d95d78f4cce3
        
         <?php
         include("footer.php");

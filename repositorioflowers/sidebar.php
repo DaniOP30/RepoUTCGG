@@ -8,11 +8,11 @@
         <ul class="navbar-nav ml-auto" >
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="color:#0B1427">
-                    <i class="fa fa-user" style="color:#42C392"></i> Username 
+                    <i class="fa fa-user" style="color:#42C392"></i> <?php echo $nombre; ?> 
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Información</a>
-                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                    <a class="dropdown-item" href="cerrarSesion.php">Cerrar sesión</a>
                 </div>
             </li>
         </ul>

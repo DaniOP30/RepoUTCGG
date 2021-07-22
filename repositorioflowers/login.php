@@ -30,6 +30,8 @@ require 'back/conexion.php';
     if($row==true){
         $rol=$row[3];
         $_SESSION['rol'] = $rol;
+        $nombre = $row[1];
+        $_SESSION['nombre'] = $nombre;
         switch($_SESSION['rol']){
             case 1:
                 header('location:admin.php');
