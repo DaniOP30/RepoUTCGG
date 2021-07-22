@@ -175,9 +175,9 @@ function obtenerId($hola) {
 </script>
 
 <?php
-$q = "SELECT nombre, descripcion, nombre_a FROM repositorios WHERE id = '$id'";
-$r = mysqli_query($conexion, $q);
-$reg = mysqli_fetch_assoc($r);
+// $q = "SELECT nombre, descripcion, nombre_a FROM repositorios WHERE id = '$id'";
+// $r = mysqli_query($conexion, $q);
+// $reg = mysqli_fetch_assoc($r);
 ?>
 <div class="modal fade" id="ventanamodal" tabindex="-1" role="dialog" aria-labelledby="tituloventana" aria-hidden="true">
     <div class="modal-dialog modal-lg">
