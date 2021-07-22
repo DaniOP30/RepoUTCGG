@@ -5,19 +5,22 @@ $query = "SELECT * FROM repositorios where id=$id";
 $result = mysqli_query($conexion, $query);
 $registro = mysqli_fetch_array($result);
 
+$rutadescarga="back/" . $registro['ruta'] . "/" . $registro['nombre_fantasma'];
+$nombreArchivo=$registro['nombre_fantasma'];
 
-
-$query2 = "SELECT * FROM manual_tec where id=$id";
+$query2 = "SELECT * FROM manual_usu where id='$id'";
 $result2 = mysqli_query($conexion, $query2);
 $registro2 = mysqli_fetch_array($result2);
 
+$rutadescarga2="back/" . $registro2['ruta'] . "/" . $registro2['nombre_fantasma'];
+$nombreArchivo2=$registro2['nombre_fantasma'];
 
-
-$query3 = "SELECT * FROM manual_usu where id=$id";
+$query3 = "SELECT * FROM manual_tec where id=$id";
 $result3 = mysqli_query($conexion, $query3);
 $registro3 = mysqli_fetch_array($result3);
 
-
+$rutadescarga3="back/" . $registro3['ruta'] . "/" . $registro3['nombre_fantasma'];
+$nombreArchivo3=$registro3['nombre_fantasma'];
 
 ?>
 <div class="modal fade" id="ventanamodal" tabindex="-1" role="dialog" aria-labelledby="tituloventana" aria-hidden="true">
@@ -54,7 +57,7 @@ $registro3 = mysqli_fetch_array($result3);
                                         <div class="row">
                                             <div class="col-4">
 
-                                                <a href="<?php echo $rutadescarga?>" download="Repositorio">
+                                                <a href="<?php echo $rutadescarga?>" download="<?php $nombreArchivo?>">
                                                     <picture>
                                                         <img src="https://smartandroid.net/wp-content/uploads/2019/01/lirelespdf4.png" class="img-fluid img-thumbnail" alt="...">
                                                     </picture>Memoria de Estadia
@@ -64,7 +67,7 @@ $registro3 = mysqli_fetch_array($result3);
                                             </div>
                                             <div class="col-4">
                                             
-                                                <a href="<?php echo $rutadescarga3?>" download="ManualUsuario">
+                                                <a href="<?php echo $rutadescarga3?>" download="<?php $nombreArchivo3?>">
                                                     <picture>
                                                         <img src="https://www.alegsa.com.ar/Imagen/icono-docx.png" class="img-fluid img-thumbnail" alt="...">
                                                     </picture>Manual de Usuario
@@ -74,7 +77,7 @@ $registro3 = mysqli_fetch_array($result3);
                                             </div>
                                             <div class="col-4">
 
-                                                <a href="<?php echo $rutadescarga2?>" download="ManualTecnico">
+                                                <a href="<?php echo $rutadescarga2?>" download="<?php $nombreArchivo2?>">
                                                     <picture>
                                                         <img src="https://www.alegsa.com.ar/Imagen/icono-docx.png" class="img-fluid img-thumbnail" alt="...">
                                                     </picture>Manual Técnico
