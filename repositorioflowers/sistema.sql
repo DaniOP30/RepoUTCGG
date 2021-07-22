@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 19-07-2021 a las 23:57:23
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.7
+-- Servidor: localhost
+-- Tiempo de generación: 21-07-2021 a las 11:04:09
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -99,16 +99,16 @@ CREATE TABLE `repositorios` (
 --
 
 INSERT INTO `repositorios` (`id`, `nombre`, `ruta`, `nombre_a`, `descripcion`, `carrera`, `tipo_proyecto`, `nivel_proyecto`) VALUES
-(1, 'FFFFF', 'Repositorios/WhatsApp Image 2021-07-17 at 9.00.05 PM.jpeg/', 'FGGG', 'FFFFF', 'TI', 'Estadia', 'Ingenieria'),
-(2, 'ggggg', 'Repositorios/Unidad 2 tema 2.2 Modelado de data warehouse..p', 'ggggg', 'gggggg', 'TI', 'Especial', 'TSU'),
-(5, 'RE UTCGG', 'Repositorios/Estado de cuenta.pdf/', 'Daniel', 'HOLA WACHOS XD', 'TI', 'Especial', 'TSU'),
-(6, 'OLVIO', 'Repositorios/WhatsApp Image 2021-07-17 at 9.00.05 PM.jpeg/', 'OLIVO', 'DLPV', 'TI', 'Integradora', 'Ingenieria'),
-(7, 'PRUEBA', 'Repositorios/18307084_Leticia_Aguirre_temario.pdf/', 'PRUEBA', 'PRUEBA', 'TI', 'Integradora', 'TSU'),
-(8, 'ASDFSDFDGT', 'Repositorios/Vacunacion Mamá.pdf/', 'ASDASDAS', 'TTYJTYUTYU', 'TI', 'Estadia', 'TSU'),
-(9, 'dfgfdgdfgdfg', 'Repositorios/WhatsApp Image 2021-07-15 at 8.33.56 PM.jpeg/', 'asdasdasdsada', 'hgjghjghj', 'TI', 'Integradora', 'TSU'),
-(10, 'Sistema administrativo conjunto de PHP y MYSQL', 'Repositorios/PMBOK_5ta_Edicion_Espanol__1_.pdf/', 'Flowers', 'Se ha desarrollado un sistema de seguridad implementado por la wea de la wea de la wea jajaja xd', 'TI', 'Estadia', 'Ingenieria'),
-(11, '', 'Repositorios/Gestión de la producción.pdf/', '', 'La mama de la mama de la mama de la mama de la mama de la mama de la mama de la mama de la  mama de la mama de la mama de la mama de la  mama de la ma', 'TI', 'Integradora', 'TSU'),
-(12, 'HOLA', 'Repositorios/Memoria de estadia - Daniel Flores Peralta.docx', 'Prueba archivo', 'La mama de la mama de la mama de la mama de la mama de la mama de la mama de la mama de la  mama de la mama de la mama de la mama de la  mama de la ma', 'TI', 'Integradora', 'TSU');
+(1, 'Proyecto Python 2.0', 'Repositorios/WhatsApp Image 2021-07-17 at 9.00.05 PM.jpeg/', 'Daniel Flores', 'Diseño y elaboración de proyecto en Python', 'TI', 'Estadia', 'Ingenieria'),
+(2, 'Roboto que baila', 'Repositorios/Unidad 2 tema 2.2 Modelado de data warehouse..p', 'Jose Denys Hernandez', 'Creación de robot bailarín para competencia utcgg', 'TI', 'Especial', 'TSU'),
+(5, 'Sistema de de envíos', 'Repositorios/Estado de cuenta.pdf/', 'Felipe Guzman', 'Sistema de envíos para practicas DHL', 'TI', 'Especial', 'TSU'),
+(6, 'Estadias sin limites', 'Repositorios/WhatsApp Image 2021-07-17 at 9.00.05 PM.jpeg/', 'Daniel Olivo', 'Sistema avanzado de memoria de estadias', 'TI', 'Integradora', 'Ingenieria'),
+(7, 'Sistema avanzado php', 'Repositorios/18307084_Leticia_Aguirre_temario.pdf/', 'Daniel De la Cruz', 'Sistema de tickets avanzado con php practica 2', 'TI', 'Integradora', 'TSU'),
+(8, 'Sistema JavaScript', 'Repositorios/Vacunacion Mamá.pdf/', 'Brenda Celestino', 'Creación y diseño de red social en javascript', 'TI', 'Estadia', 'TSU'),
+(9, 'Sistema mediante Python', 'Repositorios/WhatsApp Image 2021-07-15 at 8.33.56 PM.jpeg/', 'Ruben Salazar', 'Sistema robusto de autenticación con Python', 'TI', 'Integradora', 'TSU'),
+(10, 'Sistema administrativo conjunto de PHP y MYSQL', 'Repositorios/PMBOK_5ta_Edicion_Espanol__1_.pdf/', 'Leticia Aguilar', 'Se ha desarrollado un sistema de seguridad implementado', 'TI', 'Estadia', 'Ingenieria'),
+(11, 'Sistema PHP MySQL', 'Repositorios/Gestión de la producción.pdf/', 'Azucena Vargas', 'Sistema de repartos y boleta en php y MSQL', 'TI', 'Integradora', 'TSU'),
+(12, 'Proyecto de restaurante', 'Repositorios/Memoria de estadia - Daniel Flores Peralta.docx', 'Mauricio lopez', 'Proyecto de restaurante para memoria de estadias', 'TI', 'Integradora', 'TSU');
 
 -- --------------------------------------------------------
 

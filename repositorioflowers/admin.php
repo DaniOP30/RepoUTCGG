@@ -54,6 +54,7 @@ $result = mysqli_query($conexion, $query);
     <div class="col-12">
         <div class="row">
 
+<<<<<<< HEAD
         <?php
         while ($registro = mysqli_fetch_array($result)){
             ?>
@@ -82,6 +83,70 @@ $result = mysqli_query($conexion, $query);
 
 <body>
 
+=======
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="sidebar-toggle text-light mr-3" ><i class="fa fa-bars" style="color:#122245;"></i></a>
+
+    <a class="navbar-brand" href="#"  style="color:#122245; font: weight 600;"><i class="fa fa-code-branch" style="color:#42C392"></i>UTCGG</a>
+
+    <div class="navbar-collapse collapse" >
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="color:#0B1427">
+                    <i class="fa fa-user" style="color:#42C392"></i> Username 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Información</a>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="d-flex">
+    <nav class="sidebar bg-light" >
+        <ul class="list-unstyled">
+            <li ><a href="#"><i class="fa fa-fw fa-file-search" style="color:#9271F6" ></i> Repositorios</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-user-plus" style="color:#42C392"></i> Registrar alumno</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-chalkboard-teacher" style="color:#42C392"></i> Registrar Docente</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-file-plus" style="color:#42C392"></i>Agregar repositorio</a></li>
+           
+    </nav>
+    <div class="container">
+    <div class="content p-4">
+    <h1 class="display-5 mb-4">Todos los repositorios</h1>
+    <div class="col-12">
+        <div class="row">
+        <?php
+        while ($registro = mysqli_fetch_array($result)){
+            ?>
+        <div class="col-md-6 col-lg-4">
+        <div class="card" height="20" style="margin-top:30px;">
+  <div class="card-body">
+    <h5 class="card-title" style="margin-top:10px; "><?php echo $registro[1]; ?></h5>
+    <h6 class="card-subtitle mb-2 text-muted" style="font: weight 100px; color: #9271F6 !important; font-weight:300 !important">
+    <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
+    
+    <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[2]; ?></p>
+    <a class="btn btn-outline-primary btn-sm" href="#" role="button" ><?php echo $registro[4]; ?></a>
+    <a class="btn btn-outline-success btn-sm" href="#" role="button" ><?php echo $registro[5]; ?></a>
+    <a class="btn btn-outline-info btn-sm" href="#" role="button" ><?php echo $registro[6]; ?></a><br><br>
+
+    <a href="#" class="card-link" style="color:#42C392; margin-top:20px" value="<?php echo $v?>" onclick="obtenerId(v);" data-toggle="modal" data-target="#ventanamodal">Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
+    <a href="#" class="card-link"></a>
+  </div>
+
+</div>
+</div>
+<?php }?>
+</div>
+</div>
+
+<body>
+
+>>>>>>> 772ed48a1eaad8678d56c3d66eb7d95d78f4cce3
        
         <?php
         include("footer.php");
