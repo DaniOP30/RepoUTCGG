@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
 
 
                 mysqli_query($conexion, $query) or die("Error" . mysqli_error($conexion));
-                echo "El archivo '".$nombreres."' se ha subido con éxito <br>";
+
 
                 
 
@@ -83,15 +83,17 @@ if (isset($_POST['submit'])) {
 
 
                 mysqli_query($conexion, $query2) or die("Error" . mysqli_error($conexion));
-                echo "El archivo '".$nombredos."' se ha subido con éxito <br>";
+
 
                 $query3 = "INSERT INTO manual_tec (ruta,id_r,nombre_fantasma) 
         VALUES ('".$rutaTfinal."',1,'$nombretres')";
 
 
                 mysqli_query($conexion, $query3) or die("Error" . mysqli_error($conexion));
-                echo "El archivo '".$nombretres."' se ha subido con éxito <br>";
+
             }
+            header('Location:../registrarRepositorio.php');
+            die();
         }else{
             echo "algun archivo no es admitido, solo se permiten archivos pdf y doc";
         }
