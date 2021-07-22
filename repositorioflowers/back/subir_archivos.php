@@ -48,48 +48,55 @@ if (isset($_POST['submit'])) {
         $proyecto = $_POST["tipoP"];
         $nivel = $_POST["nivelP"];
 
+        $Bus= explode(".",$nombreres);
+        $Ext = strtolower(end($Bus));
+       
+
+        $Bus2= explode(".",$nombredos);
+        $Ext2 = strtolower(end($Bus2));
+
+        $Bus3= explode(".",$nombretres);
+        $Ext3 = strtolower(end($Bus3));
+
+        $PermitirExtAr = array('pdf', 'docx','zip', 'rar');
+
         
+        if (in_array($Ext, $PermitirExtAr) && in_array($Ext2, $PermitirExtAr) && in_array($Ext3, $PermitirExtAr))
+        {
+            if (
+                move_uploaded_file($_FILES['inputR']['tmp_name'], $upload) && move_uploaded_file($_FILES['inputU']['tmp_name'], $up)
+                && move_uploaded_file($_FILES['inputT']['tmp_name'], $load)
+            ) { //movemos el archivo a su ubicacion 
 
 
-        if (
-            move_uploaded_file($_FILES['inputR']['tmp_name'], $upload) && move_uploaded_file($_FILES['inputU']['tmp_name'], $up)
-            && move_uploaded_file($_FILES['inputT']['tmp_name'], $load)
-        ) { //movemos el archivo a su ubicacion 
-
-            echo "<b>Upload exitoso!. Datos:</b><br>";
-            echo "Nombre: <i><a href=\"".$rutares. $nombreres."\">".$_FILES['inputR']['name']."</a></i><br>";
-            echo "<br><hr><br>";
-            echo "<b>Upload exitoso!. Datos:</b><br>";
-            echo "Nombre: <i><a href=\"".$rutaUfinal. "/" .$nombredos."\">".$_FILES['inputU']['name']."</a></i><br>";
-            echo "<b>Upload exitoso!. Datos:</b><br>";
-            echo "Nombre: <i><a href=\"".$rutaTfinal. "/" . $nombretres."\">".$_FILES['inputT']['name']."</a></i><br>";
-
-            $query = "INSERT INTO repositorios (nombre,ruta,nombre_a,descripcion,carrera,tipo_proyecto,nivel_proyecto,nombre_fantasma) 
-    VALUES ('$nombre','".$rutares."','$nombre_a','$descripcion','TI','$proyecto','$nivel','$nombreres')";
+                $query = "INSERT INTO repositorios (nombre,ruta,nombre_a,descripcion,carrera,tipo_proyecto,nivel_proyecto,nombre_fantasma) 
+        VALUES ('$nombre','".$rutares."','$nombre_a','$descripcion','TI','$proyecto','$nivel','$nombreres')";
 
 
-            mysqli_query($conexion, $query) or die("Error" . mysqli_error($conexion));
-            echo "El archivo '".$nombreres."' se ha subido con éxito <br>";
+                mysqli_query($conexion, $query) or die("Error" . mysqli_error($conexion));
+                echo "El archivo '".$nombreres."' se ha subido con éxito <br>";
 
-            
+                
 
-            $query2 = "INSERT INTO manual_usu (ruta,id_r,nombre_fantasma) 
-    VALUES ('".$rutaUfinal."',1,'$nombredos')";
-
-
-            mysqli_query($conexion, $query2) or die("Error" . mysqli_error($conexion));
-            echo "El archivo '".$nombredos."' se ha subido con éxito <br>";
-
-            $query3 = "INSERT INTO manual_tec (ruta,id_r,nombre_fantasma) 
-    VALUES ('".$rutaTfinal."',1,'$nombretres')";
+                $query2 = "INSERT INTO manual_usu (ruta,id_r,nombre_fantasma) 
+        VALUES ('".$rutaUfinal."',1,'$nombredos')";
 
 
-            mysqli_query($conexion, $query3) or die("Error" . mysqli_error($conexion));
-            echo "El archivo '".$nombretres."' se ha subido con éxito <br>";
+                mysqli_query($conexion, $query2) or die("Error" . mysqli_error($conexion));
+                echo "El archivo '".$nombredos."' se ha subido con éxito <br>";
+
+                $query3 = "INSERT INTO manual_tec (ruta,id_r,nombre_fantasma) 
+        VALUES ('".$rutaTfinal."',1,'$nombretres')";
+
+
+                mysqli_query($conexion, $query3) or die("Error" . mysqli_error($conexion));
+                echo "El archivo '".$nombretres."' se ha subido con éxito <br>";
+            }
+        }else{
+            echo "algun archivo no es admitido, solo se permiten archivos pdf y doc";
         }
     }
 }
-header('Location: ../registrarRepositorio.php');
-die();
+
 
 ?>
