@@ -21,31 +21,31 @@
                     
                     <h3 class="modal-title" id="modalTitle">Registrar Docente</h3>
                     Registra docentes para darles acceso a los repositorios
-                    <form>
+                    <form action="back/subir_docente.php">
                         <div class="row" id="row-modal">
                             <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
                             </div>
                             <div class="col">
-                            <input type="text" class="form-control" placeholder="Apellido">
+                            <input type="text" class="form-control" placeholder="Apellido" name="apellidos">
                             </div>
                         </div>
                         <div class="row" id="row-modal">
                             <div class="col">
-                            <input type="text" class="form-control" placeholder="Matricula" >
+                            <input type="text" class="form-control" placeholder="Matricula" name="matricula">
                             </div>
                         </div>
                         <div class="row" id="row-modal">
                             <div class="col">
-                            <input type="text" class="form-control" placeholder="Usuario">
+                            <input type="text" class="form-control" placeholder="Usuario" name="username">
                             </div>
                             <div class="col">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" name="password">
                             </div>
                         </div>
                         <div class="row" id="row-modal">
                         <div id="das">
-                            <button class="btn btn-success" id="boton-registrarAlumno"type="button">Registrar</button>
+                            <button class="btn btn-success" id="boton-registrarAlumno"type="submit">Registrar</button>
                         </div>
                         </div>
                     </form>
