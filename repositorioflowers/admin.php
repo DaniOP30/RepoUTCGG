@@ -143,10 +143,9 @@ require 'back/conexion.php';
     <img src="img/avatar.png" class="avatar" height="15" style="border-radius: 50%;"> <?php echo $registro[3]; ?></h6>
     
     <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[4]; ?></p>
-    <a class="btn btn-outline-primary" href="#" role="button" ><?php echo $registro[5]; ?></a>
-    <a class="btn btn-outline-success" href="#" role="button" ><?php echo $registro[6]; ?></a>
-    <a class="btn btn-outline-info" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
-
+    <span class="badge badge-pill badge-info" style="font-size:13px;font-weight:300;"><?php echo $registro[6]; ?></span>
+    <span class="badge badge-pill badge-success" style="font-size:13px;font-weight:300;"><?php echo $registro[7]; ?></span> 
+    <span class="badge badge-pill badge-primary" style="font-size:13px;font-weight:300;padding-left:8px"><?php echo $registro[5]; ?></span> <br><br>
     <a href="#" class="card-link" style="color:#42C392; margin-top:20px" value="<?php echo $v?>" onclick="obtenerId(v);" data-toggle="modal" data-target="#ventanamodal">Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
     <a href="#" class="card-link"></a>
   </div>
@@ -174,11 +173,7 @@ function obtenerId($hola) {
 
 </script>
 
-<?php
-$q = "SELECT nombre, descripcion, nombre_a FROM repositorios WHERE id = '$id'";
-$r = mysqli_query($conexion, $q);
-$reg = mysqli_fetch_assoc($r);
-?>
+
 <div class="modal fade" id="ventanamodal" tabindex="-1" role="dialog" aria-labelledby="tituloventana" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content" id="modal">

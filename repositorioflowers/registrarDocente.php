@@ -69,7 +69,7 @@ $result = mysqli_query($conexion, $query);
     <div class="container" style="background-color:#F7F9FB; border-radius:20px">
     
       <div class="table-responsive custom-table-responsive">
-      <button type="button" class="btn float-right" style="background-color:#42C392; color:white; margin-bottom:10px; margin-top:20px; margin-left:30px;" data-bs-toggle="modal" id="boton-agregarAlumno" data-bs-target="#miModal">
+      <button type="button" class="btn" style="background-color:#42C392; color:white; margin-bottom:30px; margin-top:20px; padding:10px" data-bs-toggle="modal" id="boton-agregarAlumno" data-bs-target="#miModal">
       <i class="fa fa-plus" style="color:white"></i>Agregar Nuevo</button>
       
         <table class="table custom-table">
