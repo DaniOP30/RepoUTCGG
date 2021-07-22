@@ -153,9 +153,9 @@ require 'back/conexion.php';
  }
     </style>
     <p class="card-text" style="margin-top:30px; color:#7C8BA8  "><?php echo $registro[4]; ?></p>
-    <a class="btn btn-outline-primary btn-sm" href="#" role="button" ><?php echo $registro[5]; ?></a>
-    <a class="btn btn-outline-success btn-sm" href="#" role="button" ><?php echo $registro[6]; ?></a>
-    <a class="btn btn-outline-info btn-sm" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
+    
+    <a class="btn btn-outline-success " href="#" role="button" ><?php echo $registro[6]; ?></a>
+    <a class="btn btn-outline-info" href="#" role="button" ><?php echo $registro[7]; ?></a><br><br>
 
     <a href="modal.php?valor=<?php echo $registro[0]; ?>" class="card-link" style="color:#42C392; margin-top:20px" >Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
     <a href="#" class="card-link"></a>

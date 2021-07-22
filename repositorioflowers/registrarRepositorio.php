@@ -114,7 +114,7 @@ require 'back/conexion.php';
     <span class="badge badge-pill badge-info" style="font-size:13px;font-weight:300;"><?php echo $registro[6]; ?></span>
     <span class="badge badge-pill badge-success" style="font-size:13px;font-weight:300;"><?php echo $registro[7]; ?></span> 
     <span class="badge badge-pill badge-primary" style="font-size:13px;font-weight:300;padding-left:8px"><?php echo $registro[5]; ?></span> <br><br>
-    <a href="#" class="card-link" style="color:#42C392; margin-top:20px" value="<?php echo $v?>" onclick="obtenerId(v);" data-toggle="modal" data-target="#ventanamodal">Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
+    <a href="modal.php?valor=<?php echo $registro[0]; ?>" class="card-link" style="color:#42C392; margin-top:20px" >Ver repositorio <i class="fa fa-fw fa-chevron-right" style="color:#42C392" ></i></a> 
     <a href="#" class="card-link"></a>
   </div>
 
