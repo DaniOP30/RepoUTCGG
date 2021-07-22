@@ -45,19 +45,45 @@ $result = mysqli_query($conexion, $query);
     include("modal.php");
     ?>
 </head>
-    <?php
-        include("sidebar.php");
-        ?>
+
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="sidebar-toggle text-light mr-3" ><i class="fa fa-bars" style="color:#122245;"></i></a>
+
+    <a class="navbar-brand" href="#"  style="color:#122245; font: weight 600;"><i class="fa fa-code-branch" style="color:#42C392"></i>UTCGG</a>
+
+    <div class="navbar-collapse collapse" >
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="color:#0B1427">
+                    <i class="fa fa-user" style="color:#42C392"></i> Username 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Información</a>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="d-flex">
+    <nav class="sidebar bg-light" >
+        <ul class="list-unstyled">
+            <li ><a href="#"><i class="fa fa-fw fa-file-search" style="color:#9271F6" ></i> Repositorios</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-user-plus" style="color:#42C392"></i> Registrar alumno</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-chalkboard-teacher" style="color:#42C392"></i> Registrar Docente</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-file-plus" style="color:#42C392"></i>Agregar repositorio</a></li>
+           
+    </nav>
     <div class="container">
     <div class="content p-4">
     <h1 class="display-5 mb-4">Todos los repositorios</h1>
     <div class="col-12">
         <div class="row">
-
         <?php
         while ($registro = mysqli_fetch_array($result)){
             ?>
-
         <div class="col-md-6 col-lg-4">
         <div class="card" height="20" style="margin-top:30px;">
   <div class="card-body">

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.745" height="18.731" viewBox="0 0 22.745 18.731">
+  <g id="alumno" transform="translate(-62.779 -249)">
+    <path id="Icon_material-person-add" data-name="Icon material-person-add" d="M16.063,13.813a3.907,3.907,0,1,0-3.907-3.907A3.906,3.906,0,0,0,16.063,13.813Zm0,3.058c-2.608,0-7.813,1.309-7.813,3.907v1.953H23.877V20.778C23.877,18.18,18.671,16.871,16.063,16.871Z" transform="translate(60.647 244)" fill="none" stroke="#42c392" stroke-width="2"/>
+    <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M15.25,11.9H12.734V9.382a.417.417,0,1,0-.835,0V11.9H9.382a.417.417,0,0,0,0,.835H11.9V15.25a.417.417,0,0,0,.835,0V12.734H15.25a.417.417,0,0,0,0-.835Z" transform="translate(54.314 244.508)" stroke="#42c392" stroke-width="1"/>
+  </g>
+</svg>
