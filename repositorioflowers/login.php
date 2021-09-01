@@ -43,7 +43,21 @@ require 'back/conexion.php';
                 default;
         }
     }else{
-        echo "el usuario no existe";
+        ?>
+       
+       <div class="alert alert-secondary bg-danger text-light" role="alert">
+       Usuario no existente
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script>
+  $('.alert').alert()
+</script>
+      
+
+<?php
     }
     }
 
@@ -65,12 +79,10 @@ require 'back/conexion.php';
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styleflowers.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
@@ -99,17 +111,22 @@ include("header.php");
             <form action="#" method="POST">
               <div class="form-group first">
                 <label for="username">Usuario</label>
-                <input type="text" class="form-control" id="username" name="usuario">
+                <input type="text" class="form-control" id="username" name="usuario" required>
 
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password" required>
                 
               </div>
    
-              <input type="submit" value="Iniciar sesión" class="btn btn-block " style="background-color:#42C392; color:white"> <br>
+              <input type="submit" value="Iniciar sesión" class="btn btn-block " style="background-color:#42C392; color:white" id="btnlogin"> <br>
               <label class="ml-auto"><a href="#" class="forgot-pass">No tienes cuenta? <span style="color:#9271F6;">Registrate</span></a></label> 
+            <!-- <h4><//?php echo $mensaje ?></h4> -->
+
+
+      
+            
             </form>
             </div>
           </div>
@@ -124,10 +141,14 @@ include("header.php");
 include("footer.php");
 ?>
 
+
 <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    
+
          
 </body>
 
